@@ -70,7 +70,7 @@ use_parentheses = true
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "sandbox.settings"
 testpaths = "tests/"
-addopts = "--reuse-db --cov=wagtail_bootstrap_app"
+addopts = "--reuse-db --cov=wagtail_bootstrap_app -W ignore::django.utils.deprecation.RemovedInDjango40Warning"
 python_paths = "sandbox"
 
 [tool.coverage.run]
